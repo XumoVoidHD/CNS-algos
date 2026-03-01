@@ -53,7 +53,7 @@ int main()
 
     int pt = 7;
 
-    int c2 = (7 * modPow(e2, r, p)) % p;
+    int c2 = (pt * modPow(e2, r, p)) % p;
     cout << "Ciphertext: (" << c1 << ", " << c2 << ")" << endl;
 
     int s = modPow(c2, d, p);
