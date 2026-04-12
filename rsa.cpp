@@ -2,7 +2,8 @@
 using namespace std;
 
 // GCD
-int gcd(int a, int b) {
+int gcd(int a, int b) 
+{
     while (b != 0) {
         int temp = b;
         b = a % b;
@@ -12,7 +13,8 @@ int gcd(int a, int b) {
 }
 
 // Modular Inverse (brute force)
-int modInverse(int e, int phi) {
+int modInverse(int e, int phi) 
+{
     for (int d = 1; d < phi; d++) {
         if ((e * d) % phi == 1)
             return d;
@@ -21,7 +23,8 @@ int modInverse(int e, int phi) {
 }
 
 // Modular Power
-int modPower(int base, int exp, int mod) {
+int modPower(int base, int exp, int mod) 
+{
     int result = 1;
     base = base % mod;
 
