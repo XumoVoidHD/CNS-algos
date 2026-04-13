@@ -135,8 +135,8 @@ string decrypt(string text, char mat[5][5]) {
 }
 
 int main() {
-    string key = "KEYWORD";
-    string text = "HELLO";
+    string key = "MONARCHY";
+    string text = "BALLOON";
 
     char mat[5][5];
     createMatrix(key, mat);

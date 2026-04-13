@@ -24,7 +24,6 @@ void mixColumn(int a[4][4]) {
         temp[3][j] = mul3(a[0][j]) ^ a[1][j] ^ a[2][j] ^ mul2(a[3][j]);
     }
 
-    // Copy back
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
             a[i][j] = temp[i][j];
@@ -33,17 +32,19 @@ void mixColumn(int a[4][4]) {
 int main() {
     int a[4][4];
 
-    cout << "Enter 4x4 matrix:\n";
+    cout << "Enter 4x4 matrix (in HEX):\n";
     for (int i = 0; i < 4; i++)
         for (int j = 0; j < 4; j++)
-            cin >> a[i][j];
+            cin >> hex >> a[i][j];   // HEX input
 
     mixColumn(a);
 
-    cout << "\nAfter MixColumns:\n";
+    cout << "\nAfter MixColumns (HEX):\n";
     for (int i = 0; i < 4; i++) {
         for (int j = 0; j < 4; j++)
-            cout << a[i][j] << " ";
+            cout << hex << uppercase << a[i][j] << " ";
         cout << endl;
     }
+
+    return 0;
 }
